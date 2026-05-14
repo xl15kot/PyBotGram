@@ -9,8 +9,9 @@ Terminal Telegram bot client.
 ╚═╝        ╚═╝   ╚═════╝  ╚═════╝    ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝
 ```
 ## Install
-pip install python-telegram-bot colorama
-
+1.git clone https://github.com/xl15kot/PyBotGram.git 
+1.Or Option 2: Download the zip archive from GitHub.
+2.pip install python-telegram-bot colorama
 On first run, enter your bot token from @BotFather. Tokens can be saved for later use.
 ## Usage
 python main.py
