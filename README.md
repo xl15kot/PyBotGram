@@ -9,36 +9,62 @@ Terminal Telegram bot client. In beta version
 ╚═╝        ╚═╝   ╚═════╝  ╚═════╝    ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝
 ```
 ## Install
-1.git clone https://github.com/xl15kot/PyBotGram.git 
-1.Or Option 2: Download the zip archive from GitHub.
-2.pip install python-telegram-bot colorama
-On first run, enter your bot token from @BotFather. Tokens can be saved for later use.
-## Usage
+```bash
+git clone https://github.com/xl15kot/PyBotGram.git
+cd PyBotGram
+pip install python-telegram-bot colorama
 python main.py
-
-After login you'll see the chat list. Each chat shows its last message.
-Type a chat number and press Enter to open it.
-Inside a chat, the last 10 messages are displayed. Anything you type gets sent.
-New messages arrive in real-time (slight delay possible).
-## Commands
-| Command | Where | What it does |
-|---------|-------|--------------|
-| `1` `2` ... | chat list | Select chat by number |
-| `hello` | inside chat | Send a message |
-| `:mes @user hi` | anywhere | Send to a @user |
-| `:mes 123456789 text` | anywhere | Send by user ID |
-| `:b` or `/back` | inside chat | Leave current chat |
-| `:q` or `/exit` | anywhere | Exit program |
-| `:h` or `:help` | anywhere | Show help |
-| `:set` or `/set` | anywhere | Settings |
-## Settings (`:set`)
-- **Change name** — doesn't work (Bot API doesn't allow bots to rename themselves, use @BotFather instead)
-- **Change avatar** — doesn't work (same, only via @BotFather)
-- **Show bot info** — displays bot name, ID, username
-- **Logout** — deletes saved token
+```
+On first run, enter your bot token from [@BotFather](https://t.me/BotFather). Tokens can be saved for later use.
+### Chat
+- Real-time message receiving and sending
+- Chat list with last message preview
+- Message history saved locally
+- Send messages by username or ID (`:mes @user text`)
+### Media
+| Command | Description |
+|---------|-------------|
+| `:s path` or `:s file_id` | Send sticker |
+| `:p path [caption]` | Send photo |
+| `:d path [caption]` | Send document |
+| `:v path [caption]` | Send video |
+| `:a path [caption]` | Send audio |
+| `:voice path` | Send voice message |
+| `:send path` | Auto-detect and send |
+### Moderation (group admin needed)
+| Command | Description |
+|---------|-------------|
+| `:ban @user` | Ban user |
+| `:unban @user` | Unban user |
+| `:kick @user` | Kick user |
+| `:mute @user` | Mute user |
+| `:unmute @user` | Unmute user |
+### Blacklist
+| Command | Description |
+|---------|-------------|
+| `:block @user` | Add to blacklist |
+| `:unblock @user` | Remove from blacklist |
+| `:blocklist` | Show blacklist |
+### Messages
+| Command | Description |
+|---------|-------------|
+| `:r text` | Reply to last message |
+| `:fwd @user` | Forward last message |
+| `:del` | Delete last sent message |
+| `:find text` | Search in chat history |
+### Other
+| Command | Description |
+|---------|-------------|
+| `:info` | Show current chat info |
+| `:clear` | Clear local chat history |
+| `:emoji` | Toggle emoji on/off |
+| `:update` | Check and apply updates |
+| `:set` | Settings menu |
+| `:h` | Help |
+| `:q` | Quit |
 ## Dependencies
-- `python-telegram-bot>=20.0` — Telegram Bot API
-- `colorama` — terminal colors
+- `python-telegram-bot>=20.0`
+- `colorama`
 ## Screenshots
 <img width="1072" height="543" alt="image" src="https://github.com/user-attachments/assets/244ece26-ce1b-4dd5-82ac-f1810b5b1bd7" />
 <img width="914" height="579" alt="image" src="https://github.com/user-attachments/assets/f6efd637-4216-40f7-b075-84dc4c3dbabc" />
